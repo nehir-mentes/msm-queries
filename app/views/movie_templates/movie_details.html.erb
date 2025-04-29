@@ -46,8 +46,9 @@
     Director
   </dt>
     <dd>
-      <%= @the_director %>
-
+    <% matching_director = Director.where({ :id => @the_movie.director_id }) %>
+    <% @the_director = matching_director.at(0).name%>   
+    <%= @the_director %>
   <dt>
     Created at
   </dt>
