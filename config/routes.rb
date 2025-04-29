@@ -8,4 +8,8 @@ Rails.application.routes.draw do
   get("/movies", { :controller => "movies", :action => "index"})
 
   get("/movies/:movie_id", { :controller => "movies", :action => "show_details"})
+
+  get("/actors", { :controller => "actors", :action => "index"})
+
+  get("/actors/:the_id", { :controller => "actors", :action => "show_details"})
 end
