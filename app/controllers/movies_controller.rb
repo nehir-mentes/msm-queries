@@ -8,9 +8,6 @@ class MoviesController < ApplicationController
     matching_records = Movie.where({ :id => movie_id })
     @the_movie = matching_records.at(0)
 
-    matching_director = Director.where({ :id => @the_movie.director_id })
-    @the_director = matching_director.at(0).name
-
     render({ :template => "movie_templates/movie_details"})
   end
 end
